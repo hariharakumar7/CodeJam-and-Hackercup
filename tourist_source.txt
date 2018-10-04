@@ -1,0 +1,21 @@
+q=int(input())
+temp=q
+while q>0:
+  q-=1
+  n,k,v=map(int,input().split())
+  x=[]
+  for i in range(n):
+    x.append(input())
+  z=k*(v-1)
+  i=z%n
+  l=[]
+  for j in range(i,i+k):
+    y=j%n
+    l.append(y)
+  l.sort()
+  print("Case #",end="")
+  print(temp-q,end="")
+  print(":",end=" ")
+  for i in range(len(l)):
+    print(x[l[i]],end=" ")
+  print()
